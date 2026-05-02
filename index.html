@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1F3A5F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>福岡家族旅遊 2026/5/13-18</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after { box-sizing: border-box; margin:0; padding:0; }
+  html, body { height:100%; overscroll-behavior: none; }
+  body {
+    font-family:'Noto Sans TC', sans-serif;
+    background:#0d0d0d; color:#fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    height: 100dvh; height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .card-section {
+    min-height: 100dvh; min-height: 100vh;
+    width: 100%;
+    display: flex; align-items: center; justify-content: center;
+    scroll-snap-align: center;
+    padding: 12px;
+  }
+  .card-section img {
+    max-width: 100%; max-height: calc(100dvh - 24px); max-height: calc(100vh - 24px);
+    width: auto; height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.5);
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  /* === Top mini header === */
+  header {
+    position: fixed; top:0; left:0; right:0;
+    z-index: 100;
+    padding: 14px 16px 14px;
+    background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, transparent 100%);
+    pointer-events: none;
+    display: flex; justify-content: space-between; align-items: center;
+    color: #fff;
+  }
+  header .title {
+    font-family:'Shippori Mincho',serif;
+    font-size: 14px; letter-spacing: 2px; opacity:.9;
+  }
+  header .progress {
+    background: rgba(0,0,0,.4); backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 4px 12px; border-radius: 999px;
+    font-size: 12px; font-variant-numeric: tabular-nums;
+    pointer-events: auto;
+  }
+  /* === Nav button === */
+  .nav-btn {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 56px; height: 56px;
+    background: rgba(255,255,255,.95); color:#1F3A5F;
+    border-radius: 50%; border:none; box-shadow: 0 6px 20px rgba(0,0,0,.4);
+    z-index: 200; font-size: 22px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+  }
+  .nav-btn:active { transform: scale(.94); }
+
+  /* === Drawer === */
+  .drawer {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.85); backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 150;
+    display: none; flex-direction: column;
+    padding: 20px 16px;
+    overflow-y: auto;
+  }
+  .drawer.open { display: flex; animation: fadeIn .25s; }
+  @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+  .drawer h2 {
+    font-family:'Shippori Mincho',serif;
+    font-size: 24px; margin-bottom: 16px; color:#E8B547;
+    text-align: center;
+  }
+  .drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .drawer-item {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 10px; padding: 14px 12px;
+    color: #fff; text-align: left; cursor: pointer;
+    font-size: 14px; line-height: 1.4;
+    transition: all .15s;
+  }
+  .drawer-item:active { background: rgba(255,255,255,.18); }
+  .drawer-item .num { font-family:'Shippori Mincho',serif; font-weight:700; opacity:.6; font-size:12px; }
+  .drawer-item .name { font-weight: 500; margin-top: 2px; }
+  .drawer .close {
+    margin-top: 16px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    border-radius: 999px;
+    padding: 12px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .drawer .footer-link {
+    margin-top: 16px;
+    background: rgba(232,181,71,.15);
+    border: 1px solid rgba(232,181,71,.4);
+    color: #E8B547;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* === Side hint === */
+  .swipe-hint {
+    position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,.5); font-size: 12px; letter-spacing: 4px;
+    z-index: 90; pointer-events: none;
+    animation: bob 2s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity:.5 }
+    50% { transform: translateX(-50%) translateY(6px); opacity:.8 }
+  }
+
+  /* === Desktop === */
+  @media (min-width: 768px) {
+    .card-section img { max-height: 92vh; }
+    header .title { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="title">福岡 · FUKUOKA 2026</span>
+  <span class="progress" id="progress">1 / 14</span>
+</header>
+
+<main id="main">
+  <section class="card-section"><img src="cards/01-cover.png" alt="封面" loading="eager"></section>
+  <section class="card-section"><img src="cards/02-flight.png" alt="機票" loading="lazy"></section>
+  <section class="card-section"><img src="cards/03-hotel.png" alt="住宿" loading="lazy"></section>
+  <section class="card-section"><img src="cards/04-overview.png" alt="行程一覽" loading="lazy"></section>
+  <section class="card-section"><img src="cards/05-D1-arrival.png" alt="D1 抵達日" loading="lazy"></section>
+  <section class="card-section"><img src="cards/06-D2-dazaifu.png" alt="D2 太宰府" loading="lazy"></section>
+  <section class="card-section"><img src="cards/07-D3-yanagawa.png" alt="D3 柳川" loading="lazy"></section>
+  <section class="card-section"><img src="cards/08-D4-uminonakamichi.png" alt="D4 海之中道" loading="lazy"></section>
+  <section class="card-section"><img src="cards/09-D5-hakata-leisure.png" alt="D5 博多悠閒日" loading="lazy"></section>
+  <section class="card-section"><img src="cards/10-D6-checkout.png" alt="D6 退房日" loading="lazy"></section>
+  <section class="card-section"><img src="cards/11-restaurants.png" alt="餐廳一覽" loading="lazy"></section>
+  <section class="card-section"><img src="cards/12-tickets.png" alt="景點門票" loading="lazy"></section>
+  <section class="card-section"><img src="cards/13-supermarket.png" alt="超市" loading="lazy"></section>
+  <section class="card-section"><img src="cards/14-souvenirs.png" alt="伴手禮" loading="lazy"></section>
+</main>
+
+<button class="nav-btn" id="navBtn" aria-label="目錄">☰</button>
+
+<div class="drawer" id="drawer">
+  <h2>目 錄</h2>
+  <div class="drawer-grid" id="drawerGrid"></div>
+  <a class="footer-link" href="https://gist.github.com/jack1118/14e3080234910cfb5c31b939e6e40c5c" target="_blank">📄 完整文字版（gist）</a>
+  <button class="close" id="drawerClose">關閉</button>
+</div>
+
+<div class="swipe-hint" id="hint">↓ 上滑換頁</div>
+
+<script>
+  const sections = document.querySelectorAll('.card-section');
+  const main = document.getElementById('main');
+  const progress = document.getElementById('progress');
+  const navBtn = document.getElementById('navBtn');
+  const drawer = document.getElementById('drawer');
+  const drawerClose = document.getElementById('drawerClose');
+  const drawerGrid = document.getElementById('drawerGrid');
+  const hint = document.getElementById('hint');
+  const total = sections.length;
+
+  const titles = [
+    '封面', '機票', '住宿', '6 天一覽',
+    'D1 抵達日', 'D2 太宰府+麵包超人', 'D3 柳川+玫瑰園', 'D4 花季+採購',
+    'D5 博多悠閒日', 'D6 退房日',
+    '餐廳一覽', '景點門票', '超市打折', '伴手禮'
+  ];
+
+  // Build drawer grid
+  titles.forEach((t, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'drawer-item';
+    btn.innerHTML = `<div class="num">${String(i+1).padStart(2,'0')}</div><div class="name">${t}</div>`;
+    btn.onclick = () => {
+      sections[i].scrollIntoView({ behavior: 'smooth' });
+      drawer.classList.remove('open');
+    };
+    drawerGrid.appendChild(btn);
+  });
+
+  navBtn.onclick = () => drawer.classList.add('open');
+  drawerClose.onclick = () => drawer.classList.remove('open');
+  drawer.onclick = (e) => { if (e.target === drawer) drawer.classList.remove('open'); };
+
+  // Progress tracking
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.intersectionRatio > 0.5) {
+        const idx = [...sections].indexOf(e.target);
+        progress.textContent = `${idx+1} / ${total}`;
+        if (idx > 0 && hint) { hint.style.display='none'; }
+      }
+    });
+  }, { threshold: [0.5] });
+  sections.forEach(s => obs.observe(s));
+
+  // Keyboard nav (desktop)
+  document.addEventListener('keydown', (e) => {
+    const current = parseInt(progress.textContent.split('/')[0]) - 1;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault();
+      if (current < total-1) sections[current+1].scrollIntoView({ behavior: 'smooth' });
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      if (current > 0) sections[current-1].scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+</body>
+</html>
