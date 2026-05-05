@@ -220,6 +220,74 @@
     color: #E8B547; text-decoration: none; font-size: 14px;
     padding: 10px 20px; border: 1px solid rgba(232,181,71,.4); border-radius: 999px;
   }
+  .appendix-divider {
+    height: 1px; background: rgba(255,255,255,.1);
+    margin: 40px 0 24px;
+  }
+
+  /* === Restaurant cards (with menu recommendations) === */
+  .rest-card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .rest-card.rest-disabled {
+    background: rgba(255,255,255,.02);
+    border-color: rgba(255,80,80,.2);
+  }
+  a.rest-name {
+    display: block;
+    font-weight: 700;
+    font-size: 15.5px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  a.rest-name:active, a.rest-name:hover {
+    color: #E8B547;
+  }
+  .rest-rating {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(232,181,71,.18);
+    color: #E8B547;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .rest-meta {
+    font-size: 12px;
+    opacity: .65;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .rest-menu {
+    background: rgba(232,181,71,.08);
+    border-left: 3px solid rgba(232,181,71,.5);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .rest-menu b { color: #E8B547; }
+  .rest-menu span {
+    display: block;
+    margin: 4px 0;
+    padding-left: 6px;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .rest-tip {
+    font-size: 12px;
+    opacity: .7;
+    line-height: 1.5;
+    padding-left: 4px;
+  }
 </style>
 </head>
 <body>
@@ -373,6 +441,244 @@
         <div class="t-route">🛫 Mars Garden → 福岡空港國際線</div>
         <div class="t-meta">徒步 5 分 + 地鐵 5 分到國內線 + 接駁巴士 10 分・¥260/人</div>
       </a>
+    </div>
+
+    <div class="appendix-divider"></div>
+
+    <h1 style="margin-top:40px;">🍽️ 餐廳推薦菜單（讓長輩快速點）</h1>
+    <p class="appendix-sub">每家餐廳列 Google reviews 真實心得萃取的招牌菜・點擊餐廳名開 Maps</p>
+
+    <!-- D1 walk-in -->
+    <div class="day-block" style="border-color:#5B8DBF;">
+      <h2 style="color:#5B8DBF;">🛬 D1 5/13 三 晚餐 walk-in 三選一（博多駅內）</h2>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJw8CTf8eRQTURWPqyJLmyxkc">
+          🍜 一蘭 博多駅 Sun Plaza B2F <span class="rest-rating">4.2★/3,128</span>
+        </a>
+        <div class="rest-meta">每日 8:00-22:00・博多駅徒步 1 分・¥1,000-1,500/人</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>經典豚骨拉麵（可選麵硬度/湯濃度/辣度）</span>
+          <span>替玉（追加麵條 ¥200）</span>
+          <span>半熟玉子</span>
+        </div>
+        <div class="rest-tip">💡 個人座位、雨樂可吃白飯、英文菜單機器點餐</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJSeHzhsiRQTURY0hKFL0M6x0">
+          🍲 大山もつ鍋 KITTE 博多 9F <span class="rest-rating">4.7★/5,095</span>
+        </a>
+        <div class="rest-meta">每日 11:00-23:00・KITTE 博多 9F・¥3,000-4,500/人</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>味噌底もつ鍋</b>（招牌、reviews 大推）</span>
+          <span>馬刺身（生馬肉刺、福岡名物）</span>
+          <span>明太子</span>
+          <span>champon 麵收尾</span>
+        </div>
+        <div class="rest-tip">💡 包廂、有兒童菜單、無障礙、評論 5,000+ 則 — D1 首選</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=博多デイトス+ほろよい通り">
+          🍶 博多デイトス ほろよい通り B1F <span class="rest-rating">walk-in</span>
+        </a>
+        <div class="rest-meta">小料理街、串燒/餃子/海鮮多家・博多駅 B1F</div>
+        <div class="rest-tip">💡 6 人想嘗各式名物可分頭逛、不確定就直接挑人多的進</div>
+      </div>
+    </div>
+
+    <!-- D2 streetfood -->
+    <div class="day-block" style="border-color:#E8829A;">
+      <h2 style="color:#E8829A;">⛩️ D2 5/14 四 太宰府參道 Streetfood 4 家</h2>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJOx5yfqKbQTURstb62Ds0fLY">
+          🍡 安武（梅ヶ枝餅） <span class="rest-rating">4.3★/783</span>
+        </a>
+        <div class="rest-meta">每日 8:30-18:00・¥180/個</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>剛烤梅ヶ枝餅</b>（外脆內 Q、紅豆餡偏甜、現吃最佳）</span>
+          <span>每人 1-2 個就 OK</span>
+        </div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJKeyrYqKbQTUR-n6Bd-ct0xU">
+          🍓 天山（草莓大福） <span class="rest-rating">4.3★/481</span>
+        </a>
+        <div class="rest-meta">每日 10:00-17:00・¥600-800/個</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>あまおう草莓大福</b>（招牌、整顆大草莓 + 紅豆餡）</span>
+          <span>草莓最中（外脆 monaka 餅皮 + 草莓白豆餡）</span>
+          <span>葛粉冰棒（不易融化、邊走邊吃）</span>
+        </div>
+        <div class="rest-tip">💡 站著吃、有時排 5 分、5 月草莓季尾聲必嘗</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ9_hY_KKbQTURifWd7-CjkV8">
+          🍙 福太郎 太宰府店（明太子烤飯糰） <span class="rest-rating">4★/347</span>
+        </a>
+        <div class="rest-meta">每日 9:00-17:00・太宰府駅前</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>紫蘇明太子烤飯糰</b>（reviews 推、有紫蘇香）</span>
+          <span>明太子飯糰（原味）</span>
+          <span>明太子伴手禮（順便買）</span>
+        </div>
+        <div class="rest-tip">💡 點完拿號碼牌、約 10-15 分等現烤</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJGwPM-v-bQTUR3D1iiX3MP6g">
+          🥖 YAMAYA BASE（明太法國） <span class="rest-rating">4.4★/269</span>
+        </a>
+        <div class="rest-meta">每日 9:30-17:30・太宰府駅前・takeout only</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>明太法國麵包</b>（剛烤的、外脆內軟、明太子 paste 不過鹹）</span>
+        </div>
+        <div class="rest-tip">💡 沒座位站著吃、6 人共食 1-2 條剛剛好</div>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day-block" style="border-color:#7CA982;">
+      <h2 style="color:#7CA982;">🚣 D3 5/15 五 柳川 + 久留米</h2>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ76hWFK9MQDUR6xlGweilGn8">
+          🍱 元祖 本吉屋 沖端店（lunch 主案） <span class="rest-rating">4.1★/581</span>
+        </a>
+        <div class="rest-meta">週三-日 11:00-15:00・週一二休・川下り終點旁</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>せいろ蒸し</b>（蒸籠鰻飯、5 片裝、reviews 大推）</span>
+          <span>鰻肝湯（きもすい）</span>
+          <span>親子丼（reviewer 帶女兒推、雨樂可吃）</span>
+        </div>
+        <div class="rest-tip">⚠️ 全 tatami 座、需脫鞋、不收信用卡（現金 only）、6 人 walk-in 12:10 衝早</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ_R5gM99NQDURZI5n5Ege7hc">
+          🍱 若松屋（lunch 備案） <span class="rest-rating">4.4★/3,599</span>
+        </a>
+        <div class="rest-meta">週三休、其他 11:00-14:30+17:00-20:00・有日式庭園</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>せいろ蒸し定食</b>（招牌、米飯有鰻醬味、reviewer 稱「日本旅行最好的一餐」）</span>
+          <span>鰻魚蛋捲（うざく、egg roll with eel）</span>
+          <span>鰻骨煎餅（脆口下酒）</span>
+          <span>上 seiromushi 套餐含鰻肝湯 + 漬物</span>
+        </div>
+        <div class="rest-tip">💡 評分 + 評論數比本吉屋高、有信用卡、有日式庭園 view、tatami 座</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ4TShAMqRQTUR4x7gedijGb4">
+          🥩 燒肉 Hayato 隼人 博多駅前（dinner 主案） <span class="rest-rating">4.7★/2,494</span>
+        </a>
+        <div class="rest-meta">17:00-23:00・週四公休・5/15 週五 ✅・博多駅徒步 5 分</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>和牛拼盤（beef platter）</b>（reviews 多次推、適合 6 人分）</span>
+          <span>🥈 牛舌（tongue）</span>
+          <span>🥉 短肋骨（skirt steak / short ribs）</span>
+          <span>石鍋拌飯（bibimbap）填飽</span>
+          <span>洋蔥（甜醬燒、貴但驚喜）</span>
+        </div>
+        <div class="rest-tip">⚠️ 必點 1 飲料/人、portion 較小、18:00 開店即進（4.7★/2,494 排隊熱門）</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJK2p0rg70QDURsVZqL3h14cc">
+          🥩 須藤 春吉店 Sudou Haruyoshi（dinner 備案） <span class="rest-rating">4.4★/541</span>
+        </a>
+        <div class="rest-meta">每日 12:00-22:00・春吉 3-11-19・PRICE_LEVEL_EXPENSIVE</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>和牛全餐 course</b>（廚師代煎、不用自烤、長輩友善）</span>
+          <span>炭火烤和牛（reviews 推、油花漂亮）</span>
+          <span>沙拉 + 茶碗蒸 + 甜點完整</span>
+        </div>
+        <div class="rest-tip">💡 替換原本 plan 列錯的「醍醐」、廚師代煎適合長輩、有預約 + 信用卡</div>
+      </div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day-block" style="border-color:#C68A00;">
+      <h2 style="color:#C68A00;">🌊 D4 5/16 六 dinner（已預約）</h2>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ7dW6MJGRQTURINejS0AA2vo">
+          🍲 博多もつ鍋 山中 博多店 <span class="rest-rating">4.4★/581</span>
+        </a>
+        <div class="rest-meta">每日 11:30-14:00+16:00-23:00・博多駅東 2-4-6 2F・✅ 已預約 19:00</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>味噌底もつ鍋</b>（招牌、reviews 多次稱「最好吃的もつ鍋」）</span>
+          <span>自家製明太子（reviews 提）</span>
+          <span>燉牛頰肉（beef cheek、超嫩）</span>
+          <span>champon 麵或粥收尾（雜炊、要加蛋）</span>
+        </div>
+        <div class="rest-tip">💡 土耳其風內裝精緻、有兒童菜單、無障礙、湯可續</div>
+      </div>
+    </div>
+
+    <!-- D5 -->
+    <div class="day-block" style="border-color:#4A6FA5;">
+      <h2 style="color:#4A6FA5;">⛩️ D5 5/17 日 lunch + dinner</h2>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJCcxq-X2RQTUR71LKO935dyg">
+          🥖 Full Full 博多本店（lunch、預訂取貨） <span class="rest-rating">4.5★/1,385</span>
+        </a>
+        <div class="rest-meta">週一三-日 10:00-19:00・週二休・5/17 週日 ✅・✅ 預訂 RES2413</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>明太法國麵包</b>（招牌、現烤外脆內軟、reviews 一致大推）</span>
+          <span>🥈 <b>Bacon Gouda 麵包</b>（reviews 大推「partner 搶著吃」）</span>
+          <span>🥉 <b>牛奶法國</b>（milk France、紅奶蓋、reviews 推 condensed milk cream）</span>
+          <span>抹茶白巧克力 cone</span>
+          <span>松露 melon pan（栗子瑪卡）</span>
+        </div>
+        <div class="rest-tip">⚠️ Reviews 不推：鹽麵包（無味）/ 一些瑪卡類麵包不夠 wow</div>
+      </div>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJs0-UX-uRQTURkYi-DvhX3S0">
+          🐓 とり田 博多本店（dinner 主案、新主推） <span class="rest-rating">4.3★/1,781</span>
+        </a>
+        <div class="rest-meta">每日 11:30-23:00・5/17 週日 ✅・下川端町 10-5・線上可預約</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>：
+          <span>🥇 <b>Hakata set 博多套餐</b>（reviews 多次強調 — 含前菜→水炊き→雜炊→甜點）</span>
+          <span>🥈 雞翅 course（tebasaki）</span>
+          <span>🥉 雪酪甜點（granité、清爽收尾）</span>
+          <span>雞肉沾 ponzu 橘醋醬油（最對味）</span>
+          <span>雜炊 + 雞蛋（湯收尾必加）</span>
+        </div>
+        <div class="rest-tip">💡 現代化木質空間、不用脫鞋、長輩友善、6 hr 燉雞湯 reviews 一致大推 / 建議線上先預約</div>
+      </div>
+      <div class="rest-card rest-disabled">
+        <div class="rest-name" style="color:#888;">
+          ❌ 新三浦 博多本店（已換 — 週日公休）
+        </div>
+        <div class="rest-meta">週一-六 12:00-15:00+18:00-22:00・<b>週日 Closed</b></div>
+        <div class="rest-tip">⚠️ 5/17 週日撲空、改 とり田 為主案</div>
+      </div>
+    </div>
+
+    <!-- D6 -->
+    <div class="day-block" style="border-color:#6B7B8C;">
+      <h2 style="color:#6B7B8C;">🛫 D6 5/18 一 lunch（已預約）</h2>
+      <div class="rest-card">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJI4rGZ7eRQTURxQyOsE-HC5k">
+          🥩 WITH THE STYLE Steak House Medium Rare <span class="rest-rating">4.5★/533</span>
+        </a>
+        <div class="rest-meta">每日 11:30-14:30+17:30-20:30・博多駅筑紫口徒步 7 分・✅ 已預約 IR0533835889</div>
+        <div class="rest-menu">
+          <b>👍 推薦點</b>（已選 Style Lunch ¥3,800）：
+          <span>🥇 <b>大蒜炒飯（garlic rice）</b>（reviews 多次稱「the highlight」）</span>
+          <span>🥈 鐵板和牛 fillet（坐在板前看師傅煎）</span>
+          <span>🥉 和牛壽司（seared、reviews 推「thrilling」）</span>
+          <span>季節烤蔬菜（鮮度高）</span>
+          <span>宮崎芒果 + 椰子雪酪（甜點、5 月旺季）</span>
+        </div>
+        <div class="rest-tip">💡 板前座位、師傅單一服務、有兒童菜單、英文菜單、無障礙</div>
+      </div>
     </div>
 
     <div class="appendix-footer">
