@@ -71,6 +71,27 @@
     color: #E8B547; font-weight: 600;
     padding: 5px 4px;
   }
+  /* Big primary jump buttons (交通 / 推薦菜單) */
+  .day-jumps {
+    display: flex; gap: 8px; justify-content: center;
+    width: 100%; padding: 0 8px;
+  }
+  .day-jumps a {
+    flex: 1; max-width: 240px;
+    background: linear-gradient(135deg, rgba(232,181,71,.25), rgba(232,181,71,.12));
+    border: 1.5px solid rgba(232,181,71,.5);
+    border-radius: 12px;
+    padding: 10px 12px;
+    color: #fff; text-decoration: none;
+    text-align: center;
+    font-weight: 600; font-size: 13px;
+    line-height: 1.3;
+  }
+  .day-jumps a:active {
+    background: rgba(232,181,71,.5);
+    transform: scale(.97);
+  }
+  .day-jumps .ico { display: block; font-size: 16px; margin-bottom: 2px; }
   /* === Top mini header === */
   header {
     position: fixed; top:0; left:0; right:0;
@@ -336,6 +357,10 @@
   <section class="card-section">
     <div class="card-with-links">
       <img src="cards/05-D1-arrival.png" alt="D1 抵達日" loading="lazy">
+      <div class="day-jumps">
+        <a href="#transit-d1"><span class="ico">🚇</span>本日交通</a>
+        <a href="#rest-d1"><span class="ico">🍽️</span>推薦菜單</a>
+      </div>
       <div class="quick-maps">
         <span class="qm-label">📍</span>
         <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka+Airport+International+Terminal">福岡空港</a>
@@ -349,6 +374,10 @@
   <section class="card-section">
     <div class="card-with-links">
       <img src="cards/06-D2-dazaifu.png" alt="D2 太宰府" loading="lazy">
+      <div class="day-jumps">
+        <a href="#transit-d2"><span class="ico">🚇</span>本日交通</a>
+        <a href="#rest-d2"><span class="ico">🍽️</span>推薦菜單</a>
+      </div>
       <div class="quick-maps">
         <span class="qm-label">📍</span>
         <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=太宰府天満宮">太宰府天滿宮</a>
@@ -363,6 +392,10 @@
   <section class="card-section">
     <div class="card-with-links">
       <img src="cards/07-D3-yanagawa.png" alt="D3 柳川" loading="lazy">
+      <div class="day-jumps">
+        <a href="#transit-d3"><span class="ico">🚇</span>本日交通</a>
+        <a href="#rest-d3"><span class="ico">🍽️</span>推薦菜單</a>
+      </div>
       <div class="quick-maps">
         <span class="qm-label">📍</span>
         <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=松月乗船場+柳川">松月乘船場</a>
@@ -376,6 +409,10 @@
   <section class="card-section">
     <div class="card-with-links">
       <img src="cards/08-D4-uminonakamichi.png" alt="D4 海之中道" loading="lazy">
+      <div class="day-jumps">
+        <a href="#transit-d4"><span class="ico">🚇</span>本日交通</a>
+        <a href="#rest-d4"><span class="ico">🍽️</span>推薦菜單</a>
+      </div>
       <div class="quick-maps">
         <span class="qm-label">📍</span>
         <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=海の中道海浜公園">海濱公園</a>
@@ -387,6 +424,10 @@
   <section class="card-section">
     <div class="card-with-links">
       <img src="cards/09-D5-hakata-leisure.png" alt="D5 博多悠閒日" loading="lazy">
+      <div class="day-jumps">
+        <a href="#transit-d5"><span class="ico">🚇</span>本日交通</a>
+        <a href="#rest-d5"><span class="ico">🍽️</span>推薦菜單</a>
+      </div>
       <div class="quick-maps">
         <span class="qm-label">📍</span>
         <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=櫛田神社+博多">櫛田神社</a>
@@ -400,6 +441,10 @@
   <section class="card-section">
     <div class="card-with-links">
       <img src="cards/10-D6-checkout.png" alt="D6 退房日" loading="lazy">
+      <div class="day-jumps">
+        <a href="#transit-d6"><span class="ico">🚇</span>本日交通</a>
+        <a href="#rest-d6"><span class="ico">🍽️</span>推薦菜單</a>
+      </div>
       <div class="quick-maps">
         <span class="qm-label">📍</span>
         <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJCcxq-X2RQTUR71LKO935dyg">Full Full</a>
@@ -440,7 +485,7 @@
     <h1>📍 Google Maps 一鍵導航</h1>
     <p class="appendix-sub">每個交通段都是可點擊連結、直接在 Google Maps App 開啟導航</p>
 
-    <div class="day-block" style="border-color:#5B8DBF;">
+    <div id="transit-d1" class="day-block" style="border-color:#5B8DBF;">
       <h2 style="color:#5B8DBF;">🛬 D1 5/13 三 抵達日</h2>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Fukuoka+Airport+International+Terminal&destination=Mars+Garden+Hotel+Hakata&travelmode=transit">
         <div class="t-route">✈️ 福岡空港國際線 → Mars Garden Hotel</div>
@@ -456,7 +501,7 @@
       </a>
     </div>
 
-    <div class="day-block" style="border-color:#E8829A;">
+    <div id="transit-d2" class="day-block" style="border-color:#E8829A;">
       <h2 style="color:#E8829A;">⛩️ D2 5/14 四 太宰府 + 麵包超人</h2>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hakata+Station&destination=Dazaifu+Tenmangu&travelmode=transit">
         <div class="t-route">🚆 博多駅 → 太宰府天滿宮</div>
@@ -481,7 +526,7 @@
       </a>
     </div>
 
-    <div class="day-block" style="border-color:#7CA982;">
+    <div id="transit-d3" class="day-block" style="border-color:#7CA982;">
       <h2 style="color:#7CA982;">🚣 D3 5/15 五 柳川 + 久留米</h2>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Nishitetsu+Fukuoka+Tenjin+Station&destination=Nishitetsu+Yanagawa+Station&travelmode=transit">
         <div class="t-route">🚆 西鐵福岡(天神) → 西鐵柳川</div>
@@ -503,7 +548,7 @@
       </a>
     </div>
 
-    <div class="day-block" style="border-color:#C68A00;">
+    <div id="transit-d4" class="day-block" style="border-color:#C68A00;">
       <h2 style="color:#C68A00;">🌊 D4 5/16 六 海之中道 + 千早</h2>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hakata+Station&destination=Uminonakamichi+Station&travelmode=transit">
         <div class="t-route">🚆 博多駅 → 海ノ中道駅</div>
@@ -525,7 +570,7 @@
       </a>
     </div>
 
-    <div class="day-block" style="border-color:#4A6FA5;">
+    <div id="transit-d5" class="day-block" style="border-color:#4A6FA5;">
       <h2 style="color:#4A6FA5;">⛩️ D5 5/17 日 博多悠閒日</h2>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=櫛田神社+博多">
         <div class="t-route">📍 櫛田神社（博多総鎮守）</div>
@@ -549,7 +594,7 @@
       </a>
     </div>
 
-    <div class="day-block" style="border-color:#6B7B8C;">
+    <div id="transit-d6" class="day-block" style="border-color:#6B7B8C;">
       <h2 style="color:#6B7B8C;">🛫 D6 5/18 一 退房日</h2>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Mars+Garden+Hotel+Hakata&destination=Full+Full+博多本店+祇園町&travelmode=walking">
         <div class="t-route">🚶 Mars Garden → Full Full 博多本店</div>
@@ -571,7 +616,7 @@
     <p class="appendix-sub">每家餐廳列 Google reviews 真實心得萃取的招牌菜・點擊餐廳名開 Maps</p>
 
     <!-- D1 walk-in -->
-    <div class="day-block" style="border-color:#5B8DBF;">
+    <div id="rest-d1" class="day-block" style="border-color:#5B8DBF;">
       <h2 style="color:#5B8DBF;">🛬 D1 5/13 三 晚餐 walk-in 三選一（博多駅內）</h2>
       <div class="rest-card">
         <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJw8CTf8eRQTURWPqyJLmyxkc">
@@ -610,7 +655,7 @@
     </div>
 
     <!-- D2 streetfood -->
-    <div class="day-block" style="border-color:#E8829A;">
+    <div id="rest-d2" class="day-block" style="border-color:#E8829A;">
       <h2 style="color:#E8829A;">⛩️ D2 5/14 四 太宰府參道 Streetfood 4 家</h2>
       <div class="rest-card">
         <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJOx5yfqKbQTURstb62Ds0fLY">
@@ -663,7 +708,7 @@
     </div>
 
     <!-- D3 -->
-    <div class="day-block" style="border-color:#7CA982;">
+    <div id="rest-d3" class="day-block" style="border-color:#7CA982;">
       <h2 style="color:#7CA982;">🚣 D3 5/15 五 柳川 + 久留米</h2>
       <div class="rest-card">
         <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ76hWFK9MQDUR6xlGweilGn8">
@@ -723,7 +768,7 @@
     </div>
 
     <!-- D4 -->
-    <div class="day-block" style="border-color:#C68A00;">
+    <div id="rest-d4" class="day-block" style="border-color:#C68A00;">
       <h2 style="color:#C68A00;">🌊 D4 5/16 六 dinner（已預約）</h2>
       <div class="rest-card">
         <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ7dW6MJGRQTURINejS0AA2vo">
@@ -742,7 +787,7 @@
     </div>
 
     <!-- D5 -->
-    <div class="day-block" style="border-color:#4A6FA5;">
+    <div id="rest-d5" class="day-block" style="border-color:#4A6FA5;">
       <h2 style="color:#4A6FA5;">⛩️ D5 5/17 日 lunch + dinner</h2>
       <div class="rest-card">
         <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJCcxq-X2RQTUR71LKO935dyg">
@@ -784,7 +829,7 @@
     </div>
 
     <!-- D6 -->
-    <div class="day-block" style="border-color:#6B7B8C;">
+    <div id="rest-d6" class="day-block" style="border-color:#6B7B8C;">
       <h2 style="color:#6B7B8C;">🛫 D6 5/18 一 lunch（已預約）</h2>
       <div class="rest-card">
         <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJI4rGZ7eRQTURxQyOsE-HC5k">
