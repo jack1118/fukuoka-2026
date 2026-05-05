@@ -40,6 +40,37 @@
     user-select: none;
     -webkit-user-drag: none;
   }
+  /* === Card with quick Maps links === */
+  .card-with-links {
+    display: flex; flex-direction: column; align-items: center;
+    width: 100%; max-width: 760px;
+    gap: 10px;
+  }
+  .card-with-links img {
+    max-width: 100%;
+    max-height: calc(100dvh - 80px); max-height: calc(100vh - 80px);
+    width: auto; height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.5);
+    user-select: none; -webkit-user-drag: none;
+  }
+  .quick-maps {
+    display: flex; gap: 6px; flex-wrap: wrap; justify-content: center;
+    font-size: 12px; padding: 0 8px;
+  }
+  .quick-maps a {
+    background: rgba(232,181,71,.18);
+    border: 1px solid rgba(232,181,71,.35);
+    border-radius: 999px; padding: 5px 10px;
+    color: #fff; text-decoration: none;
+    white-space: nowrap;
+  }
+  .quick-maps a:active { background: rgba(232,181,71,.45); }
+  .quick-maps .qm-label {
+    color: #E8B547; font-weight: 600;
+    padding: 5px 4px;
+  }
   /* === Top mini header === */
   header {
     position: fixed; top:0; left:0; right:0;
@@ -302,14 +333,105 @@
   <section class="card-section"><img src="cards/02-flight.png" alt="機票" loading="lazy"></section>
   <section class="card-section"><img src="cards/03-hotel.png" alt="住宿" loading="lazy"></section>
   <section class="card-section"><img src="cards/04-overview.png" alt="行程一覽" loading="lazy"></section>
-  <section class="card-section"><img src="cards/05-D1-arrival.png" alt="D1 抵達日" loading="lazy"></section>
-  <section class="card-section"><img src="cards/06-D2-dazaifu.png" alt="D2 太宰府" loading="lazy"></section>
-  <section class="card-section"><img src="cards/07-D3-yanagawa.png" alt="D3 柳川" loading="lazy"></section>
-  <section class="card-section"><img src="cards/08-D4-uminonakamichi.png" alt="D4 海之中道" loading="lazy"></section>
-  <section class="card-section"><img src="cards/09-D5-hakata-leisure.png" alt="D5 博多悠閒日" loading="lazy"></section>
-  <section class="card-section"><img src="cards/10-D6-checkout.png" alt="D6 退房日" loading="lazy"></section>
-  <section class="card-section"><img src="cards/11-restaurants.png" alt="餐廳一覽" loading="lazy"></section>
-  <section class="card-section"><img src="cards/12-tickets.png" alt="景點門票" loading="lazy"></section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/05-D1-arrival.png" alt="D1 抵達日" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka+Airport+International+Terminal">福岡空港</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mars+Garden+Hotel+Hakata">Mars Garden</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJw8CTf8eRQTURWPqyJLmyxkc">一蘭 Sun Plaza</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJSeHzhsiRQTURY0hKFL0M6x0">大山もつ鍋 KITTE</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=LOPIA+ヨドバシ博多">LOPIA</a>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/06-D2-dazaifu.png" alt="D2 太宰府" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=太宰府天満宮">太宰府天滿宮</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJOx5yfqKbQTURstb62Ds0fLY">安武</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJKeyrYqKbQTUR-n6Bd-ct0xU">天山</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ9_hY_KKbQTURifWd7-CjkV8">福太郎</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJGwPM-v-bQTUR3D1iiX3MP6g">YAMAYA BASE</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=アンパンマンこどもミュージアム+博多">麵包超人博物館</a>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/07-D3-yanagawa.png" alt="D3 柳川" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=松月乗船場+柳川">松月乘船場</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ76hWFK9MQDUR6xlGweilGn8">本吉屋 沖端店</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ_R5gM99NQDURZI5n5Ege7hc">若松屋</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=石橋文化中心+久留米">玫瑰園</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ4TShAMqRQTUR4x7gedijGb4">Hayato 隼人</a>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/08-D4-uminonakamichi.png" alt="D4 海之中道" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=海の中道海浜公園">海濱公園</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Akachan+Honpo+Gardens+Chihaya">阿卡將 千早</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ7dW6MJGRQTURINejS0AA2vo">山中もつ鍋</a>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/09-D5-hakata-leisure.png" alt="D5 博多悠閒日" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=櫛田神社+博多">櫛田神社</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJCcxq-X2RQTUR71LKO935dyg">Full Full</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Canal+City+博多">Canal City</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=LaLaport+福岡">LaLaport</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJs0-UX-uRQTURkYi-DvhX3S0">とり田</a>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/10-D6-checkout.png" alt="D6 退房日" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJCcxq-X2RQTUR71LKO935dyg">Full Full</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJI4rGZ7eRQTURxQyOsE-HC5k">Medium Rare</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka+Airport+International+Terminal">福岡空港</a>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/11-restaurants.png" alt="餐廳一覽" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍 已預約</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ7dW6MJGRQTURINejS0AA2vo">山中もつ鍋</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJI4rGZ7eRQTURxQyOsE-HC5k">Medium Rare</a>
+        <a href="#maps-appendix" style="background:rgba(255,165,0,.3);border-color:rgba(255,165,0,.6);">📋 推薦菜單</a>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card-with-links">
+      <img src="cards/12-tickets.png" alt="景點門票" loading="lazy">
+      <div class="quick-maps">
+        <span class="qm-label">📍</span>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=太宰府天満宮">太宰府</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=アンパンマンこどもミュージアム+博多">麵包超人</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=松月乗船場+柳川">柳川川下り</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=石橋文化中心+久留米">玫瑰園</a>
+        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=海の中道海浜公園">海濱公園</a>
+      </div>
+    </div>
+  </section>
   <section class="card-section"><img src="cards/13-supermarket.png" alt="超市" loading="lazy"></section>
   <section class="card-section"><img src="cards/14-souvenirs.png" alt="伴手禮" loading="lazy"></section>
   <section class="card-section"><img src="cards/15-transit.png" alt="交通速查" loading="lazy"></section>
@@ -345,10 +467,10 @@
       </a>
       <div class="t-streetfood">
         <div class="t-streetfood-title">🍡 太宰府參道 streetfood 4 家</div>
-        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJOx5yfqKbQTURstb62Ds0fLY">🍡 安武（梅枝餅）4.3★</a>
-        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJKeyrYqKbQTUR-n6Bd-ct0xU">🍓 天山（草莓大福）4.3★</a>
-        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ9_hY_KKbQTURifWd7-CjkV8">🍙 福太郎（明太烤飯糰）4★</a>
-        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJGwPM-v-bQTUR3D1iiX3MP6g">🥖 YAMAYA BASE（明太法國）4.4★</a>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJOx5yfqKbQTURstb62Ds0fLY">🍡 安武（梅枝餅）4.3★</a>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJKeyrYqKbQTUR-n6Bd-ct0xU">🍓 天山（草莓大福）4.3★</a>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ9_hY_KKbQTURifWd7-CjkV8">🍙 福太郎（明太烤飯糰）4★</a>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJGwPM-v-bQTUR3D1iiX3MP6g">🥖 YAMAYA BASE（明太法國）4.4★</a>
       </div>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Dazaifu+Station&destination=Nakasu-Kawabata+Station+Hakata&travelmode=transit">
         <div class="t-route">🚆 太宰府 → 中洲川端（麵包超人）</div>
@@ -452,7 +574,7 @@
     <div class="day-block" style="border-color:#5B8DBF;">
       <h2 style="color:#5B8DBF;">🛬 D1 5/13 三 晚餐 walk-in 三選一（博多駅內）</h2>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJw8CTf8eRQTURWPqyJLmyxkc">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJw8CTf8eRQTURWPqyJLmyxkc">
           🍜 一蘭 博多駅 Sun Plaza B2F <span class="rest-rating">4.2★/3,128</span>
         </a>
         <div class="rest-meta">每日 8:00-22:00・博多駅徒步 1 分・¥1,000-1,500/人</div>
@@ -465,7 +587,7 @@
         <div class="rest-tip">💡 個人座位、雨樂可吃白飯、英文菜單機器點餐</div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJSeHzhsiRQTURY0hKFL0M6x0">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJSeHzhsiRQTURY0hKFL0M6x0">
           🍲 大山もつ鍋 KITTE 博多 9F <span class="rest-rating">4.7★/5,095</span>
         </a>
         <div class="rest-meta">每日 11:00-23:00・KITTE 博多 9F・¥3,000-4,500/人</div>
@@ -491,7 +613,7 @@
     <div class="day-block" style="border-color:#E8829A;">
       <h2 style="color:#E8829A;">⛩️ D2 5/14 四 太宰府參道 Streetfood 4 家</h2>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJOx5yfqKbQTURstb62Ds0fLY">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJOx5yfqKbQTURstb62Ds0fLY">
           🍡 安武（梅ヶ枝餅） <span class="rest-rating">4.3★/783</span>
         </a>
         <div class="rest-meta">每日 8:30-18:00・¥180/個</div>
@@ -502,7 +624,7 @@
         </div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJKeyrYqKbQTUR-n6Bd-ct0xU">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJKeyrYqKbQTUR-n6Bd-ct0xU">
           🍓 天山（草莓大福） <span class="rest-rating">4.3★/481</span>
         </a>
         <div class="rest-meta">每日 10:00-17:00・¥600-800/個</div>
@@ -515,7 +637,7 @@
         <div class="rest-tip">💡 站著吃、有時排 5 分、5 月草莓季尾聲必嘗</div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ9_hY_KKbQTURifWd7-CjkV8">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ9_hY_KKbQTURifWd7-CjkV8">
           🍙 福太郎 太宰府店（明太子烤飯糰） <span class="rest-rating">4★/347</span>
         </a>
         <div class="rest-meta">每日 9:00-17:00・太宰府駅前</div>
@@ -528,7 +650,7 @@
         <div class="rest-tip">💡 點完拿號碼牌、約 10-15 分等現烤</div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJGwPM-v-bQTUR3D1iiX3MP6g">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJGwPM-v-bQTUR3D1iiX3MP6g">
           🥖 YAMAYA BASE（明太法國） <span class="rest-rating">4.4★/269</span>
         </a>
         <div class="rest-meta">每日 9:30-17:30・太宰府駅前・takeout only</div>
@@ -544,7 +666,7 @@
     <div class="day-block" style="border-color:#7CA982;">
       <h2 style="color:#7CA982;">🚣 D3 5/15 五 柳川 + 久留米</h2>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ76hWFK9MQDUR6xlGweilGn8">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ76hWFK9MQDUR6xlGweilGn8">
           🍱 元祖 本吉屋 沖端店（lunch 主案） <span class="rest-rating">4.1★/581</span>
         </a>
         <div class="rest-meta">週三-日 11:00-15:00・週一二休・川下り終點旁</div>
@@ -557,7 +679,7 @@
         <div class="rest-tip">⚠️ 全 tatami 座、需脫鞋、不收信用卡（現金 only）、6 人 walk-in 12:10 衝早</div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ_R5gM99NQDURZI5n5Ege7hc">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ_R5gM99NQDURZI5n5Ege7hc">
           🍱 若松屋（lunch 備案） <span class="rest-rating">4.4★/3,599</span>
         </a>
         <div class="rest-meta">週三休、其他 11:00-14:30+17:00-20:00・有日式庭園</div>
@@ -571,7 +693,7 @@
         <div class="rest-tip">💡 評分 + 評論數比本吉屋高、有信用卡、有日式庭園 view、tatami 座</div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ4TShAMqRQTUR4x7gedijGb4">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ4TShAMqRQTUR4x7gedijGb4">
           🥩 燒肉 Hayato 隼人 博多駅前（dinner 主案） <span class="rest-rating">4.7★/2,494</span>
         </a>
         <div class="rest-meta">17:00-23:00・週四公休・5/15 週五 ✅・博多駅徒步 5 分</div>
@@ -586,7 +708,7 @@
         <div class="rest-tip">⚠️ 必點 1 飲料/人、portion 較小、18:00 開店即進（4.7★/2,494 排隊熱門）</div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJK2p0rg70QDURsVZqL3h14cc">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJK2p0rg70QDURsVZqL3h14cc">
           🥩 須藤 春吉店 Sudou Haruyoshi（dinner 備案） <span class="rest-rating">4.4★/541</span>
         </a>
         <div class="rest-meta">每日 12:00-22:00・春吉 3-11-19・PRICE_LEVEL_EXPENSIVE</div>
@@ -604,7 +726,7 @@
     <div class="day-block" style="border-color:#C68A00;">
       <h2 style="color:#C68A00;">🌊 D4 5/16 六 dinner（已預約）</h2>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ7dW6MJGRQTURINejS0AA2vo">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJ7dW6MJGRQTURINejS0AA2vo">
           🍲 博多もつ鍋 山中 博多店 <span class="rest-rating">4.4★/581</span>
         </a>
         <div class="rest-meta">每日 11:30-14:00+16:00-23:00・博多駅東 2-4-6 2F・✅ 已預約 19:00</div>
@@ -623,7 +745,7 @@
     <div class="day-block" style="border-color:#4A6FA5;">
       <h2 style="color:#4A6FA5;">⛩️ D5 5/17 日 lunch + dinner</h2>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJCcxq-X2RQTUR71LKO935dyg">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJCcxq-X2RQTUR71LKO935dyg">
           🥖 Full Full 博多本店（lunch、預訂取貨） <span class="rest-rating">4.5★/1,385</span>
         </a>
         <div class="rest-meta">週一三-日 10:00-19:00・週二休・5/17 週日 ✅・✅ 預訂 RES2413</div>
@@ -638,7 +760,7 @@
         <div class="rest-tip">⚠️ Reviews 不推：鹽麵包（無味）/ 一些瑪卡類麵包不夠 wow</div>
       </div>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJs0-UX-uRQTURkYi-DvhX3S0">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJs0-UX-uRQTURkYi-DvhX3S0">
           🐓 とり田 博多本店（dinner 主案、新主推） <span class="rest-rating">4.3★/1,781</span>
         </a>
         <div class="rest-meta">每日 11:30-23:00・5/17 週日 ✅・下川端町 10-5・線上可預約</div>
@@ -665,7 +787,7 @@
     <div class="day-block" style="border-color:#6B7B8C;">
       <h2 style="color:#6B7B8C;">🛫 D6 5/18 一 lunch（已預約）</h2>
       <div class="rest-card">
-        <a class="rest-name" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJI4rGZ7eRQTURxQyOsE-HC5k">
+        <a class="rest-name" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fukuoka&query_place_id=ChIJI4rGZ7eRQTURxQyOsE-HC5k">
           🥩 WITH THE STYLE Steak House Medium Rare <span class="rest-rating">4.5★/533</span>
         </a>
         <div class="rest-meta">每日 11:30-14:30+17:30-20:30・博多駅筑紫口徒步 7 分・✅ 已預約 IR0533835889</div>
