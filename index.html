@@ -146,13 +146,87 @@
     .card-section img { max-height: 92vh; }
     header .title { font-size: 16px; }
   }
+
+  /* === Appendix (Maps live links) === */
+  .appendix-section {
+    min-height: 100dvh; min-height: 100vh;
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 16px 40px;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+  }
+  .appendix-inner { max-width: 720px; margin: 0 auto; }
+  .appendix-inner h1 {
+    font-family:'Shippori Mincho',serif;
+    font-size: 28px; text-align:center; margin-bottom: 8px;
+    color: #E8B547;
+  }
+  .appendix-sub {
+    text-align:center; opacity:.7; font-size: 13px; margin-bottom: 32px;
+  }
+  .day-block {
+    background: rgba(255,255,255,.04);
+    border-left: 4px solid;
+    border-radius: 8px;
+    padding: 16px 16px 8px;
+    margin-bottom: 20px;
+  }
+  .day-block h2 {
+    font-family:'Shippori Mincho',serif;
+    font-size: 18px; margin-bottom: 12px;
+  }
+  .transit-link {
+    display: block;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .15s;
+  }
+  .transit-link:active, .transit-link:hover {
+    background: rgba(232,181,71,.15);
+    border-color: rgba(232,181,71,.4);
+  }
+  .t-route { font-weight: 600; font-size: 14.5px; line-height: 1.4; }
+  .t-meta { font-size: 12px; opacity: .65; margin-top: 4px; line-height: 1.4; }
+  .t-streetfood {
+    background: rgba(255,165,0,.08);
+    border: 1px solid rgba(255,165,0,.2);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+  .t-streetfood-title { font-weight: 600; font-size: 13.5px; margin-bottom: 8px; }
+  .t-link-mini {
+    display: block;
+    padding: 6px 8px;
+    margin: 3px 0;
+    background: rgba(255,255,255,.05);
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12.5px;
+  }
+  .t-link-mini:active, .t-link-mini:hover { background: rgba(255,165,0,.2); }
+  .appendix-footer {
+    text-align: center; margin-top: 24px; padding: 20px 0;
+  }
+  .appendix-footer a {
+    color: #E8B547; text-decoration: none; font-size: 14px;
+    padding: 10px 20px; border: 1px solid rgba(232,181,71,.4); border-radius: 999px;
+  }
 </style>
 </head>
 <body>
 
 <header>
   <span class="title">福岡 · FUKUOKA 2026</span>
-  <span class="progress" id="progress">1 / 14</span>
+  <span class="progress" id="progress">1 / 15</span>
 </header>
 
 <main id="main">
@@ -170,6 +244,142 @@
   <section class="card-section"><img src="cards/12-tickets.png" alt="景點門票" loading="lazy"></section>
   <section class="card-section"><img src="cards/13-supermarket.png" alt="超市" loading="lazy"></section>
   <section class="card-section"><img src="cards/14-souvenirs.png" alt="伴手禮" loading="lazy"></section>
+  <section class="card-section"><img src="cards/15-transit.png" alt="交通速查" loading="lazy"></section>
+  <section id="maps-appendix" class="appendix-section">
+  <div class="appendix-inner">
+    <h1>📍 Google Maps 一鍵導航</h1>
+    <p class="appendix-sub">每個交通段都是可點擊連結、直接在 Google Maps App 開啟導航</p>
+
+    <div class="day-block" style="border-color:#5B8DBF;">
+      <h2 style="color:#5B8DBF;">🛬 D1 5/13 三 抵達日</h2>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Fukuoka+Airport+International+Terminal&destination=Mars+Garden+Hotel+Hakata&travelmode=transit">
+        <div class="t-route">✈️ 福岡空港國際線 → Mars Garden Hotel</div>
+        <div class="t-meta">接駁巴士 10 分 + 地鐵 5 分 + 徒步 5 分・¥260/人</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mars+Garden+Hotel+Hakata+博多駅中央街4-10">
+        <div class="t-route">📍 Mars Garden Hotel Hakata（飯店地點）</div>
+        <div class="t-meta">博多駅中央街 4-10・check-in 14:00 / out 11:00</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=ヨドバシ博多+LOPIA">
+        <div class="t-route">📍 LOPIA ヨドバシ博多（D1 晚超市體驗）</div>
+        <div class="t-meta">博多駅中央街 6-12 ヨドバシ博多 4F・徒步 5 分</div>
+      </a>
+    </div>
+
+    <div class="day-block" style="border-color:#E8829A;">
+      <h2 style="color:#E8829A;">⛩️ D2 5/14 四 太宰府 + 麵包超人</h2>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hakata+Station&destination=Dazaifu+Tenmangu&travelmode=transit">
+        <div class="t-route">🚆 博多駅 → 太宰府天滿宮</div>
+        <div class="t-meta">地鐵到天神 + 西鐵特急到二日市換普通・約 50-60 分・¥630/人</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=太宰府天満宮">
+        <div class="t-route">📍 太宰府天滿宮</div>
+      </a>
+      <div class="t-streetfood">
+        <div class="t-streetfood-title">🍡 太宰府參道 streetfood 4 家</div>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJOx5yfqKbQTURstb62Ds0fLY">🍡 安武（梅枝餅）4.3★</a>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJKeyrYqKbQTUR-n6Bd-ct0xU">🍓 天山（草莓大福）4.3★</a>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJ9_hY_KKbQTURifWd7-CjkV8">🍙 福太郎（明太烤飯糰）4★</a>
+        <a class="t-link-mini" target="_blank" href="https://www.google.com/maps/place/?q=place_id:ChIJGwPM-v-bQTUR3D1iiX3MP6g">🥖 YAMAYA BASE（明太法國）4.4★</a>
+      </div>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Dazaifu+Station&destination=Nakasu-Kawabata+Station+Hakata&travelmode=transit">
+        <div class="t-route">🚆 太宰府 → 中洲川端（麵包超人）</div>
+        <div class="t-meta">西鐵到天神 + 地鐵 1 站・約 35 分・¥630/人</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hakata+Riverain+Mall+アンパンマンこどもミュージアム">
+        <div class="t-route">📍 麵包超人兒童博物館（博多 Riverain Mall 5-6F）</div>
+      </a>
+    </div>
+
+    <div class="day-block" style="border-color:#7CA982;">
+      <h2 style="color:#7CA982;">🚣 D3 5/15 五 柳川 + 久留米</h2>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Nishitetsu+Fukuoka+Tenjin+Station&destination=Nishitetsu+Yanagawa+Station&travelmode=transit">
+        <div class="t-route">🚆 西鐵福岡(天神) → 西鐵柳川</div>
+        <div class="t-meta">西鐵特急・47-49 分・¥870/人（推薦柳川特盛套票 ¥3,840 含船+鰻飯）</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=松月乗船場+柳川川下り">
+        <div class="t-route">📍 松月乘船場（柳川川下り）</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=元祖本吉屋+沖端店">
+        <div class="t-route">📍 元祖本吉屋 沖端店（鰻魚蒸籠飯、340 年）</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Nishitetsu+Yanagawa+Station&destination=石橋文化中心+久留米&travelmode=transit">
+        <div class="t-route">🚆 西鐵柳川 → 石橋文化中心（久留米玫瑰園）</div>
+        <div class="t-meta">西鐵特急 12-15 分到久留米 + 巴士 12 分・¥540/人</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Kurume+Station&destination=Hakata+Station&travelmode=transit">
+        <div class="t-route">🚆 久留米 → 博多</div>
+        <div class="t-meta">JR 鹿兒島本線快速・35-40 分・¥760/人</div>
+      </a>
+    </div>
+
+    <div class="day-block" style="border-color:#C68A00;">
+      <h2 style="color:#C68A00;">🌊 D4 5/16 六 海之中道 + 千早</h2>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hakata+Station&destination=Uminonakamichi+Station&travelmode=transit">
+        <div class="t-route">🚆 博多駅 → 海ノ中道駅</div>
+        <div class="t-meta">JR 香椎駅 + 香椎線・45-55 分・¥470/人</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=海の中道海浜公園">
+        <div class="t-route">📍 海之中道海濱公園</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Uminonakamichi+Station&destination=Chihaya+Station&travelmode=transit">
+        <div class="t-route">🚆 海ノ中道 → 千早駅</div>
+        <div class="t-meta">香椎線 + 鹿兒島本線・約 30 分・¥360/人</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Akachan+Honpo+Gardens+Chihaya">
+        <div class="t-route">📍 阿卡將本舖 千早店（Gardens Chihaya 2F）</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=博多もつ鍋+山中+博多店">
+        <div class="t-route">📍 山中もつ鍋 博多店（已預約 19:00）</div>
+        <div class="t-meta">博多駅東口徒步 5 分</div>
+      </a>
+    </div>
+
+    <div class="day-block" style="border-color:#4A6FA5;">
+      <h2 style="color:#4A6FA5;">⛩️ D5 5/17 日 博多悠閒日</h2>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=櫛田神社+博多">
+        <div class="t-route">📍 櫛田神社（博多総鎮守）</div>
+        <div class="t-meta">中洲川端駅徒步 5 分</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Full+Full+博多本店+祇園町">
+        <div class="t-route">📍 Full Full 博多本店（明太法國老舖）</div>
+        <div class="t-meta">祇園町 9-3・4.5★/1,384・5/17+5/18 預訂取貨</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Canal+City+博多">
+        <div class="t-route">📍 Canal City 博多</div>
+        <div class="t-meta">中洲川端徒步 5 分</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=LaLaport+福岡">
+        <div class="t-route">📍 LaLaport 福岡（備案、有大鋼彈）</div>
+        <div class="t-meta">博多→JR 竹下駅 4 分 ¥160 + 徒步 9 分</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=新三浦+博多本店+呉服町">
+        <div class="t-route">📍 新三浦 博多本店（水煮雞鍋、米其林 1910 年）</div>
+        <div class="t-meta">呉服町駅徒步 5 分・walk-in 最高風險</div>
+      </a>
+    </div>
+
+    <div class="day-block" style="border-color:#6B7B8C;">
+      <h2 style="color:#6B7B8C;">🛫 D6 5/18 一 退房日</h2>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Mars+Garden+Hotel+Hakata&destination=Full+Full+博多本店+祇園町&travelmode=walking">
+        <div class="t-route">🚶 Mars Garden → Full Full 博多本店</div>
+        <div class="t-meta">徒步 12-15 分 / 地鐵祇園駅 1 站 + 徒步 3 分</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=WITH+THE+STYLE+FUKUOKA+Steak+House+Medium+Rare">
+        <div class="t-route">📍 WITH THE STYLE Steak House Medium Rare（已預約 11:30）</div>
+        <div class="t-meta">住吉 1-9-18・博多駅筑紫口徒步 7 分・編號 IR0533835889</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Mars+Garden+Hotel+Hakata&destination=Fukuoka+Airport+International+Terminal&travelmode=transit">
+        <div class="t-route">🛫 Mars Garden → 福岡空港國際線</div>
+        <div class="t-meta">徒步 5 分 + 地鐵 5 分到國內線 + 接駁巴士 10 分・¥260/人</div>
+      </a>
+    </div>
+
+    <div class="appendix-footer">
+      <a href="#" onclick="document.querySelector('main').scrollTo({top:0,behavior:'smooth'});return false;">↑ 回頂部圖卡</a>
+    </div>
+  </div>
+</section>
 </main>
 
 <button class="nav-btn" id="navBtn" aria-label="目錄">☰</button>
@@ -198,10 +408,10 @@
     '封面', '機票', '住宿', '6 天一覽',
     'D1 抵達日', 'D2 太宰府+麵包超人', 'D3 柳川+玫瑰園', 'D4 花季+採購',
     'D5 博多悠閒日', 'D6 退房日',
-    '餐廳一覽', '景點門票', '超市打折', '伴手禮'
+    '餐廳一覽', '景點門票', '超市打折', '伴手禮', '🚇 交通速查'
   ];
 
-  // Build drawer grid
+  // Build drawer grid (cards + appendix link)
   titles.forEach((t, i) => {
     const btn = document.createElement('button');
     btn.className = 'drawer-item';
@@ -212,6 +422,19 @@
     };
     drawerGrid.appendChild(btn);
   });
+
+  // Add Maps appendix shortcut
+  const mapsBtn = document.createElement('button');
+  mapsBtn.className = 'drawer-item';
+  mapsBtn.style.gridColumn = '1 / -1';
+  mapsBtn.style.background = 'rgba(232,181,71,.15)';
+  mapsBtn.style.borderColor = 'rgba(232,181,71,.4)';
+  mapsBtn.innerHTML = `<div class="num">📍</div><div class="name">Google Maps 一鍵導航附錄（可點）</div>`;
+  mapsBtn.onclick = () => {
+    document.getElementById('maps-appendix').scrollIntoView({ behavior: 'smooth' });
+    drawer.classList.remove('open');
+  };
+  drawerGrid.appendChild(mapsBtn);
 
   navBtn.onclick = () => drawer.classList.add('open');
   drawerClose.onclick = () => drawer.classList.remove('open');
