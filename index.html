@@ -277,6 +277,54 @@
     margin: 40px 0 24px;
   }
 
+  /* === ♿ Wheelchair access notes === */
+  .wc-note {
+    background: rgba(99,180,255,.12);
+    border-left: 3px solid #63B4FF;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 8px 0;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .wc-note .wc-title {
+    font-weight: 700;
+    color: #63B4FF;
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .wc-note b { color: #FFD27F; }
+  .wc-banner {
+    background: linear-gradient(135deg, rgba(99,180,255,.15), rgba(232,181,71,.1));
+    border: 1.5px solid rgba(99,180,255,.4);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  .wc-banner-title {
+    font-weight: 700;
+    color: #63B4FF;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  .wc-banner ul {
+    margin: 6px 0; padding-left: 20px;
+    font-size: 12.5px; line-height: 1.7;
+  }
+  .wc-banner b { color: #FFD27F; }
+  .wc-call {
+    display: inline-block;
+    background: rgba(255,80,80,.15);
+    border: 1px solid rgba(255,80,80,.4);
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin: 2px 4px 2px 0;
+    color: #FFB4B4;
+    font-size: 11.5px;
+    text-decoration: none;
+  }
+
   /* === Restaurant cards (with menu recommendations) === */
   .rest-card {
     background: rgba(255,255,255,.06);
@@ -489,8 +537,36 @@
     <h1>📍 Google Maps 一鍵導航</h1>
     <p class="appendix-sub">每個交通段都是可點擊連結、直接在 Google Maps App 開啟導航</p>
 
+    <div class="wc-banner">
+      <div class="wc-banner-title">♿ 媽媽全程使用手動可折疊輪椅 — 動線必背 6 條</div>
+      <ul>
+        <li>博多駅 = <b>中央口</b>（不是博多口、不是筑紫口）</li>
+        <li>西鐵福岡(天神)駅 = <b>北口（Solaria Stage 側）</b>，三越口/南口完全無電梯</li>
+        <li>西鐵二日市駅 = <b>東口</b>（西口無電梯）</li>
+        <li>中洲川端駅 = <b>6 號出口</b>（直通 Riverain 麵包超人館）</li>
+        <li>太宰府太鼓橋 = <b>左側池畔迂回路</b>（橋是階梯）</li>
+        <li>千早駅 = <b>西口</b>（直接平面通往 Gardens 1F）</li>
+      </ul>
+      <div style="margin-top:10px;font-size:12px;opacity:.85;">
+        🚨 出發前必打：
+        <a class="wc-call" href="tel:0225599 2555">5/11 虎航 02-5599-2555</a>
+        <a class="wc-call" href="tel:0926216059">5/12 福岡空港 092-621-6059</a>
+        <a class="wc-call" href="tel:0944726177">5/14 松月 0944-72-6177</a>
+      </div>
+      <div style="margin-top:8px;font-size:11.5px;opacity:.7;">
+        🆘 介助：JR 0570-07-8787 ／ 西鐵 050-3616-2150 ／ 福岡市地鐵 092-734-7800 ／ 第一交通 UD 092-481-6400
+      </div>
+    </div>
+
     <div id="transit-d1" class="day-block" style="border-color:#5B8DBF;">
       <h2 style="color:#5B8DBF;">🛬 D1 5/13 三 抵達日</h2>
+      <div class="wc-note">
+        <span class="wc-title">♿ 福岡空港 → Mars Garden 輪椅動線</span>
+        ① 國際線 1F 入境 → <b>走 South Exit + South Elevator</b>（不要走 North/1A）<br>
+        ② ノンステップ連節シャトルバス（10 分）→ 國內線 1F 南口下車<br>
+        ③ 1F 案內所（092-621-6059 可借輪椅）→ 🛗 電梯下 B1 國內線改札（地鐵）<br>
+        ④ 地鐵 2 站 → 博多駅 → 🛗 月台電梯 → <b>中央口</b>（不要走博多口/筑紫口）→ 過馬路即 Mars Garden
+      </div>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Fukuoka+Airport+International+Terminal&destination=Mars+Garden+Hotel+Hakata&travelmode=transit">
         <div class="t-route">✈️ 福岡空港國際線 → Mars Garden Hotel</div>
         <div class="t-meta">接駁巴士 10 分 + 地鐵 5 分 + 徒步 5 分・¥260/人</div>
@@ -507,6 +583,15 @@
 
     <div id="transit-d2" class="day-block" style="border-color:#E8829A;">
       <h2 style="color:#E8829A;">⛩️ D2 5/14 四 太宰府 + 博多軸線採購</h2>
+      <div class="wc-note">
+        <span class="wc-title">♿ D2 輪椅完整動線</span>
+        <b>地鐵天神 → 西鐵福岡(天神)</b>：左轉地下街向西 50m → 🛗 <b>Solaria Stage 大樓電梯上 2F → 北口</b>（🚨 三越口/南口無電梯！）<br>
+        <b>太宰府天滿宮</b>：太鼓橋全是階梯 → <b>走左側池畔迂回路</b>。本殿改修中、用「仮殿」（平坦無段差）。境內案內所可借輪椅<br>
+        <b>太宰府回程二日市換車</b>：🚨 <b>必走東口</b>（西口無電梯）→ 跨線橋電梯換急行<br>
+        <b>吉塚 Workman</b>：JR 吉塚徒步 8-10 分人行道窄、<b>建議直接 GO ワゴン ¥500-700</b><br>
+        <b>Canal City 噴水秀</b>：<b>最佳輪椅觀景在 B1F 廣場正面/兩側</b>（平面）、演出前 5 分卡位、4F Don Q 直達電梯<br>
+        🍡 streetfood 4 家：<b>福太郎 + YAMAYA</b> 在駅前平地（最友善）、安武+天山 在參道石畳上、店外接餅 OK
+      </div>
       <div style="background:rgba(232,181,71,.15);border:1.5px solid rgba(232,181,71,.4);border-radius:10px;padding:12px;margin-bottom:10px;">
         <div style="font-weight:700;color:#E8B547;font-size:14px;margin-bottom:6px;">⭐ 旅人號觀光列車（必搭 9:48 天神発）</div>
         <div style="font-size:12px;line-height:1.6;opacity:.9;">
@@ -562,15 +647,28 @@
 
     <div id="transit-d3" class="day-block" style="border-color:#7CA982;">
       <h2 style="color:#7CA982;">🚣 D3 5/15 五 柳川 + 久留米</h2>
+      <div class="wc-note">
+        <span class="wc-title">♿ D3 輪椅完整動線（最高難度日）</span>
+        <b>西鐵福岡 → 柳川</b>：北口進、特急車椅子席通常在 1/6 號車（兩端）<br>
+        <b>🚣 川下り</b>：🚨 <b>5/14 必打 0944-72-6177 預約</b>「車椅子で乗船希望」、船員 + 岸上 staff 介助、輪椅整台搬上船+船首固定。雨天/波大改御花庭園散策<br>
+        <b>🍱 lunch ⭐ 改若松屋</b>（不去本吉屋）：官網明示「車椅子バリアフリー化」+ 椅子席、4.5★、必預約 0944-72-3163「6 名・車椅子・椅子席希望」<br>
+        <b>玫瑰園</b>：入口 15cm 段差有 slope（坡度略陡）、推薦從西鐵久留米駅<b>直接搭計程車到車椅子駐車場</b><br>
+        <b>🍲 dinner ⭐ 改 KITTE もつ鍋おおやま 9F</b>（焼肉 Hayato 退、無バリアフリー）：4.7★/5,095、KITTE 全層多功能廁所、6 人 walk-in
+      </div>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Nishitetsu+Fukuoka+Tenjin+Station&destination=Nishitetsu+Yanagawa+Station&travelmode=transit">
         <div class="t-route">🚆 西鐵福岡(天神) → 西鐵柳川</div>
         <div class="t-meta">西鐵特急・47-49 分・¥870/人（推薦柳川特盛套票 ¥3,840 含船+鰻飯）</div>
       </a>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=松月乗船場+柳川川下り">
         <div class="t-route">📍 松月乘船場（柳川川下り）</div>
+        <div class="t-meta">⚠️ 5/14 必打 0944-72-6177 預約輪椅乘船</div>
       </a>
-      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=元祖本吉屋+沖端店">
-        <div class="t-route">📍 元祖本吉屋 沖端店（鰻魚蒸籠飯、340 年）</div>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=若松屋+柳川+鰻魚">
+        <div class="t-route">📍 ⭐ 若松屋（D3 lunch 主案、♿ 無障礙+椅子席）</div>
+        <div class="t-meta">必預約 0944-72-3163「車椅子・椅子席希望」・4.5★/765・うなぎ百名店</div>
+      </a>
+      <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=元祖本吉屋+沖端店" style="opacity:.55;">
+        <div class="t-route">📍 ~~元祖本吉屋 沖端店~~（退為 fallback、輪椅進入有風險）</div>
       </a>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Nishitetsu+Yanagawa+Station&destination=石橋文化中心+久留米&travelmode=transit">
         <div class="t-route">🚆 西鐵柳川 → 石橋文化中心（久留米玫瑰園）</div>
@@ -584,6 +682,14 @@
 
     <div id="transit-d4" class="day-block" style="border-color:#C68A00;">
       <h2 style="color:#C68A00;">🌊 D4 5/16 六 海之中道 + 千早</h2>
+      <div class="wc-note">
+        <span class="wc-title">♿ D4 輪椅完整動線</span>
+        <b>JR 博多 → 香椎 → 海ノ中道</b>：改札進站告訴駅員「車椅子、海ノ中道まで」→ 駅員月台斜板 + 無線通報。<b>香椎換香椎線預留 8 分</b>（單線、班距 30 分、🛗 全月台電梯）<br>
+        <b>海ノ中道駅</b>：✅ 平層、無階梯、無人駅但月台會有人協助斜板<br>
+        <b>🌸 海濱公園</b>：⭐ 入口案內所申請<b>電動カート</b>（身障手帳免費）+ <b>パークトレイン</b>（園內周遊巴士、輪椅可上）。300ha 太大不可徒步、🚻 全園 47 處廁所/30 處多功能<br>
+        <b>千早 アカチャンホンポ</b>：✅ 千早駅 1F 西口直接平面通往 Gardens 1F、館內全電梯<br>
+        <b>🍲 山中もつ鍋（D4 dinner 已預約）</b>：🚨 <b>必打 092-260-8517 確認 ハカタベビル 2F 是否有電梯</b>、預約備註「車椅子、椅子席希望、掘り炬燵不要」
+      </div>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hakata+Station&destination=Uminonakamichi+Station&travelmode=transit">
         <div class="t-route">🚆 博多駅 → 海ノ中道駅</div>
         <div class="t-meta">JR 香椎駅 + 香椎線・45-55 分・¥470/人</div>
@@ -606,9 +712,19 @@
 
     <div id="transit-d5" class="day-block" style="border-color:#4A6FA5;">
       <h2 style="color:#4A6FA5;">⛩️ D5 5/17 日 雨樂主場 + 博多老街</h2>
+      <div class="wc-note">
+        <span class="wc-title">♿ D5 輪椅完整動線</span>
+        <b>博多 → 中洲川端</b>：地鐵 1 站、🛗 月台中央電梯 → 川端口改札 → <b>必走 6 號出口</b>（不要 4/7 號）→ 直通博多リバレインモール<br>
+        <b>櫛田神社</b>：南神門最平坦、拜殿前有 slope、境內車椅子貸出。境內可駕車進入給身障（9-16:30、30 分內）<br>
+        <b>Full Full</b>：⚠️ 必打 092-292-7838 確認內用吧台 OK / Plan B：外帶在町家ふるさと館外吃<br>
+        <b>博多町家</b>：✅ 只看展示棟（無障礙完備）、町家棟天井低撞頭、外觀拍照即可<br>
+        <b>麵包超人館</b>：🛗 Elevator A/B 上 5F、館內全 1F 平面、🎭 <b>Stage 有「車椅子専用席」、進場跟 staff 說「車椅子席希望」</b>、092-291-8855 確認折疊輪椅可入館<br>
+        <b>🐓 とり田</b>：🚨 <b>預約 092-272-0920 必明示「車椅子で来店、1F 椅子席希望」</b>（不要被帶到 2F）<br>
+        <b>🌙 屋台</b>：⛔ 媽媽不去（河岸石板路+高腳椅）、Jack+太太自己去
+      </div>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=櫛田神社+博多">
         <div class="t-route">📍 櫛田神社（博多総鎮守）</div>
-        <div class="t-meta">10:15-10:45・中洲川端駅徒步 5 分</div>
+        <div class="t-meta">10:15-10:45・中洲川端駅 6 號出口徒步 5 分・♿ 南神門最平坦</div>
       </a>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Full+Full+博多本店+祇園町">
         <div class="t-route">🥖 Full Full 博多本店（11:00 預訂取貨 RES2413）</div>
@@ -630,6 +746,12 @@
 
     <div id="transit-d6" class="day-block" style="border-color:#6B7B8C;">
       <h2 style="color:#6B7B8C;">🛫 D6 5/18 一 退房日</h2>
+      <div class="wc-note">
+        <span class="wc-title">♿ D6 輪椅完整動線</span>
+        <b>🥩 Medium Rare</b>：✅ 公式明示 wheelchair accessible、🚨 追加打 <b>092-433-3960</b> 備註「車椅子、鐵板燒櫃台高度調整 + 短時間立位移乗 OK」、從 WITH THE STYLE 飯店 lobby 走バリアフリー入口最確實<br>
+        <b>🛫 飯店 → 機場</b>：💡 <b>推薦改用 GO app 叫ワゴン直送國際線</b>（¥1,800、12 分、6 人輪椅免換航廈接駁）、最省力<br>
+        <b>備案地鐵</b>：博多駅中央口 → 🛗 → 地鐵 → 福岡空港駅 → 1F 國內線 → <b>South Exit + South Elevator</b> → ノンステップシャトルバス → 國際線 4F 出境
+      </div>
       <a class="transit-link" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Mars+Garden+Hotel+Hakata&destination=Full+Full+博多本店+祇園町&travelmode=walking">
         <div class="t-route">🚶 Mars Garden → Full Full 博多本店</div>
         <div class="t-meta">徒步 12-15 分 / 地鐵祇園駅 1 站 + 徒步 3 分</div>
